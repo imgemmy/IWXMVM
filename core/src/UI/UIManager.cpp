@@ -152,6 +152,10 @@ namespace IWXMVM::UI::UIManager
 			IMGUI_CHECKVERSION();
 			ImGui::CreateContext();
 
+			ImGuiIO& io = ImGui::GetIO(); (void)io;
+			io.ConfigFlags |= ImGuiConfigFlags_DockingEnable;
+			io.ConfigDockingWithShift = true;
+
 			ImGui::StyleColorsDark();
 
 			HWND hwnd = Mod::GetGameInterface()->GetWindowHandle();;
